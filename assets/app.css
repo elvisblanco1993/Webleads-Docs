@@ -1,0 +1,33 @@
+/* Importing Quicksand fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.tile-link {
+  transition: box-shadow .3s ease,transform .3s ease,-webkit-box-shadow .3s ease,-webkit-transform .3s ease;
+  color: #3c4043;
+  border-radius: 10px;
+  border: 1px solid #ebecf2;
+}
+
+.tile-link:hover {
+  box-shadow: 0 9px 26px 0 rgba(126,133,144,.25);
+  transform: translateY(-5px);
+  text-decoration: none;
+}
+
+.article-option {
+  font-size: .8rem;
+}
+
+.nav-link {
+  display: block;
+  padding: .5rem 1rem;
+}
+
+blockquote {
+  border-left: 4px solid #475bf4;
+  padding-left: 1rem;
+}
