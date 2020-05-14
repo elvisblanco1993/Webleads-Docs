@@ -20,7 +20,10 @@
           </a>
         </div>
 
-        <div class="list-group p-0">
+        <div class="content-table-title">
+          Table of contents
+        </div>
+        <div class="list-group p-0 content-table">
           <?php echo retrieve_articles_list($db); ?>
         </div>
 

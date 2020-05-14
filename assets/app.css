@@ -31,3 +31,19 @@ blockquote {
   border-left: 4px solid #475bf4;
   padding-left: 1rem;
 }
+
+.content-table {
+  border-radius: 0;
+  border-left: .5px solid #b9b9b9;
+}
+
+.content-table-title {
+  font-weight: 500;
+}
+
+.content-table-item {
+  font-weight: 400;
+  font-size: 15px;
+  padding-left: 2%;
+  color: #424242;
+}

@@ -18,7 +18,7 @@
       $article_contents = $row['contents'];
 
       // Create a list to show in sidebar
-      $article_item .= "<a href='?a=$article_id'>
+      $article_item .= "<a class='content-table-item' href='?a=$article_id'>
                           <svg class='bi bi-file-earmark-text' width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
                             <path d='M4 1h5v1H4a1 1 0 00-1 1v10a1 1 0 001 1h8a1 1 0 001-1V6h1v7a2 2 0 01-2 2H4a2 2 0 01-2-2V3a2 2 0 012-2z'/>
                             <path d='M9 4.5V1l5 5h-3.5A1.5 1.5 0 019 4.5z'/>
