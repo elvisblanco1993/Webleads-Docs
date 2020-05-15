@@ -18,6 +18,8 @@
           <div class="form-group">
             <textarea class="form-control" name="contents" cols="30" rows="10"><?php echo retrieve_single_article($db, $a)[2]; ?></textarea>
             <small class="text-muted">Supports markdown.</small>
+            <br>
+            <small class="text-muted"><strong>Tips</strong>: To add a single quote, instead add two, like ''</small>
           </div>
           <div class="form-group">
             <input type="submit" value="Save" name="update_article" class="btn btn-outline-primary">

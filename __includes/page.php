@@ -6,11 +6,11 @@
   }
 ?>
 
-<main class="col mt-5" role="main">
+<main class="col mt-md-5 mt-3" role="main">
   <div class="container">
     <div class="row">
       <div class="col-md-3">
-        <div class="mb-5">
+        <div class="mb-md-5 mb-3">
           <a class="text-dark" href="/">
             <svg class="bi bi-arrow-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" d="M5.854 4.646a.5.5 0 010 .708L3.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z" clip-rule="evenodd"/>
@@ -20,10 +20,10 @@
           </a>
         </div>
 
-        <div class="content-table-title">
+        <div class="content-table-title d-none d-sm-block">
           Table of contents
         </div>
-        <div class="list-group p-0 content-table">
+        <div class="list-group p-0 content-table d-none d-sm-flex">
           <?php echo retrieve_articles_list($db); ?>
         </div>
 

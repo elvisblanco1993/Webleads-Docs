@@ -87,3 +87,26 @@
     $query = "DELETE FROM articles WHERE id = $id";
     return $db->query($query);
   }
+
+  function search($db, $q)
+  {
+    $query = "SELECT * FROM articles WHERE title LIKE '%$q%' OR contents LIKE '%$q%'";
+    $ret = $db->query($query);
+
+    while ($row = $ret->fetchArray()) {
+      $article_id = $row['id'];
+      $article_date_created = $row['date_created'];
+      $article_title = $row['title'];
+      $article_contents = $row['contents'];
+
+      // Create a list to show in sidebar
+      $search_item .= "<div class='col mb-4'>
+                          <a class='card tile-link' href='?a=$article_id'>
+                            <div class='card-body'>
+                              <h5 class='card-text'>$article_title</h5>
+                            </div>
+                          </a>
+                        </div>";
+    }
+    return $search_item;
+  }

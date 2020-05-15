@@ -5,6 +5,18 @@
   font-family: 'Quicksand', sans-serif;
 }
 
+.banner {
+  background: rgba(255,255,255,.9);
+  padding: 2% 0;
+}
+
+.head {
+  background-image: url(/assets/img/banner.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .tile-link {
   transition: box-shadow .3s ease,transform .3s ease,-webkit-box-shadow .3s ease,-webkit-transform .3s ease;
   color: #3c4043;
@@ -46,4 +58,11 @@ blockquote {
   font-size: 15px;
   padding-left: 2%;
   color: #424242;
+}
+
+#csearch {
+  position: absolute;
+  right: 8%;
+  margin-top: -5px;
+  color: rgb(255, 0, 0);
 }
