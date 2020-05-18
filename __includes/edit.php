@@ -7,7 +7,7 @@
 ?>
 <?php if ($user_loggedin == true): ?>
 <main class="col mt-5" role="main">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col">
         <form method="post">

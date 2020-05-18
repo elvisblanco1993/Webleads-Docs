@@ -11,7 +11,7 @@
   }
 
   // Implement Parsedown
-  $parse = new BParsedown;
+  $parse = new ParsedownExtra;
 
   // Initialize $clear_search_btn
   $clear_search_btn = null;
