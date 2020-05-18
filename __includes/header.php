@@ -1,6 +1,6 @@
 <header>
-  <nav class="navbar navbar-light navbar-expand-md sticky-top bg-white">
-    <div class="container">
+  <nav class="navbar navbar-light navbar-expand-md sticky-top bg-light">
+    <div class="container-fluid">
       <a class="navbar-brand" href="/">
         <img src="/assets/img/logo.svg" height="36">
         Webleads Docs
