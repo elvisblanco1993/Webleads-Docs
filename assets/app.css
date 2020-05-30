@@ -12,7 +12,7 @@
 
 .head {
   background-image: url(/assets/img/banner.webp);
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -55,15 +55,16 @@ blockquote {
 
 .content-table-item {
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1rem;
   padding-left: 2%;
   color: #424242;
 }
 
 .content-box {
-  max-height: calc(100vh - 9rem);
+  max-height: 100vh;
   overflow-y: auto;
 }
+
 
 #csearch {
   position: absolute;
@@ -72,16 +73,17 @@ blockquote {
   color: rgb(255, 0, 0);
 }
 
-img[alt=demo] {
+img[alt=image] {
   width: 100%;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @media (min-width: 450px) {
-  img[alt=demo] {
+  img[alt=image] {
     width: 80%;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }
+

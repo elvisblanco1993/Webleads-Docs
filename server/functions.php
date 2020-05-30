@@ -42,12 +42,27 @@
       $article_contents = $row['contents'];
 
       // Create a list to show in sidebar
-      $article_item .= "<div class='col mb-4'>
-                          <a class='card tile-link' href='?a=$article_id'>
-                            <div class='card-body'>
-                              <h5 class='card-text'>$article_title</h5>
-                            </div>
-                          </a>
+      // $article_item .= "<div class='col mb-4'>
+      //                     <a class='card tile-link' href='?a=$article_id'>
+      //                       <div class='card-body'>
+      //                         <h5 class='card-text'>$article_title</h5>
+      //                       </div>
+      //                     </a>
+      //                   </div>";
+
+      $article_item .= "<div class='card'>
+                          <img class='card-img-top w-100 d-block' src=''/>
+                          <div class='card-body'>
+                            <h4 class='card-title'>$article_title</h4>
+                            <p class='card-text text-truncate'>$article_contents</p>
+                            <a class='text-primary' role='button' href='?a=$article_id'>
+                            Read article
+                              <svg class='bi bi-arrow-right' width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+                                <path fill-rule='evenodd' d='M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z'/>
+                                <path fill-rule='evenodd' d='M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z'/>
+                              </svg>
+                            </a>
+                          </div>
                         </div>";
     }
     return $article_item;
@@ -100,13 +115,20 @@
       $article_contents = $row['contents'];
 
       // Create a list to show in sidebar
-      $search_item .= "<div class='col mb-4'>
-                          <a class='card tile-link' href='?a=$article_id'>
-                            <div class='card-body'>
-                              <h5 class='card-text'>$article_title</h5>
-                            </div>
+      $search_item .= "<div class='card'>
+                        <img class='card-img-top w-100 d-block' src=''/>
+                        <div class='card-body'>
+                          <h4 class='card-title'>$article_title</h4>
+                          <p class='card-text text-truncate'>$article_contents</p>
+                          <a class='text-primary' role='button' href='?a=$article_id'>
+                          Read article
+                            <svg class='bi bi-arrow-right' width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+                              <path fill-rule='evenodd' d='M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z'/>
+                              <path fill-rule='evenodd' d='M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z'/>
+                            </svg>
                           </a>
-                        </div>";
+                        </div>
+                      </div>";
     }
     return $search_item;
   }

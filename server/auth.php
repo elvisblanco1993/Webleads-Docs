@@ -35,9 +35,9 @@ if(isset($_SESSION['username'])) {
 }
 
 // Configuration
-$client_id = '0oacaxyc2EQuvI7xv4x6';
-$client_secret = 'GuBSPpUSKGdcJDat6acOiNLoH_ciIsDI6PvUiPFa';
-$redirect_uri = 'https://help.webleads.app';
+$client_id = '0oac2v2ebIMFdrk604x6';
+$client_secret = 'f6jr9jd6RrLvY9olBq-gVwtgmcy2A3mIHHAdexXS';
+$redirect_uri = 'http://localhost:4000';
 $metadata_url = 'https://dev-772697.okta.com/oauth2/auscaxyg6lnaitKCU4x6/.well-known/oauth-authorization-server';
 $metadata = http($metadata_url);
 

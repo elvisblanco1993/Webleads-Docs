@@ -22,7 +22,7 @@
             <small class="text-muted"><strong>Tips</strong>: To add a single quote, instead add two, like ''</small>
           </div>
           <div class="form-group">
-            <input type="submit" value="Save & exit" name="update_article" class="btn btn-outline-primary">
+            <input type="submit" value="Save & exit" name="update_article" class="btn btn-outline-primary" accesskey="s" title="Press 'Alt+Shift+S' to save form.">
             <a class="btn btn-light ml-2" href="?a=<?php echo $a; ?>">Discard</a>
           </div>
         </form>
