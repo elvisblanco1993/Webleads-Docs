@@ -1,5 +1,4 @@
 <?php
-
   function create_article($db, $d, $t, $c)
   {
     $query = "INSERT INTO articles(date_created, title, contents, url) VALUES('$d', '$t', '$c', '$t')";
@@ -8,6 +7,7 @@
 
   function retrieve_articles_list($db)
   {
+    $article_item = '';
     $query = "SELECT * FROM articles";
     $ret = $db->query($query);
 
@@ -18,7 +18,7 @@
       $article_contents = $row['contents'];
 
       // Create a list to show in sidebar
-      $article_item .= "<a class='content-table-item' href='?a=$article_id'>
+      $article_item .= "<a class='list-group-item' href='?a=$article_id'>
                           <svg class='bi bi-file-earmark-text' width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
                             <path d='M4 1h5v1H4a1 1 0 00-1 1v10a1 1 0 001 1h8a1 1 0 001-1V6h1v7a2 2 0 01-2 2H4a2 2 0 01-2-2V3a2 2 0 012-2z'/>
                             <path d='M9 4.5V1l5 5h-3.5A1.5 1.5 0 019 4.5z'/>
@@ -32,6 +32,7 @@
 
   function retrieve_articles_cards($db)
   {
+    $article_item = '';
     $query = "SELECT * FROM articles";
     $ret = $db->query($query);
 
@@ -41,20 +42,9 @@
       $article_title = $row['title'];
       $article_contents = $row['contents'];
 
-      // Create a list to show in sidebar
-      // $article_item .= "<div class='col mb-4'>
-      //                     <a class='card tile-link' href='?a=$article_id'>
-      //                       <div class='card-body'>
-      //                         <h5 class='card-text'>$article_title</h5>
-      //                       </div>
-      //                     </a>
-      //                   </div>";
-
       $article_item .= "<div class='card'>
-                          <img class='card-img-top w-100 d-block' src=''/>
                           <div class='card-body'>
                             <h4 class='card-title'>$article_title</h4>
-                            <p class='card-text text-truncate'>$article_contents</p>
                             <a class='text-primary' role='button' href='?a=$article_id'>
                             Read article
                               <svg class='bi bi-arrow-right' width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
@@ -70,6 +60,7 @@
 
   function retrieve_single_article($db, $a)
   {
+    $article_single = '';
     $query = "SELECT * FROM articles WHERE id = $a";
     $ret = $db->query($query);
     $row = $ret->fetchArray();
@@ -78,7 +69,7 @@
     $article_title = $row['title'];
     $article_contents = $row['contents'];
 
-    $article_single = array($article_date_created, $article_title, $article_contents);
+    $article_single = array($article_date_created, $article_title, $article_contents, $article_image);
 
     return $article_single;
   }
@@ -105,6 +96,7 @@
 
   function search($db, $q)
   {
+    $search_item = '';
     $query = "SELECT * FROM articles WHERE title LIKE '%$q%' OR contents LIKE '%$q%'";
     $ret = $db->query($query);
 
@@ -116,10 +108,8 @@
 
       // Create a list to show in sidebar
       $search_item .= "<div class='card'>
-                        <img class='card-img-top w-100 d-block' src=''/>
                         <div class='card-body'>
                           <h4 class='card-title'>$article_title</h4>
-                          <p class='card-text text-truncate'>$article_contents</p>
                           <a class='text-primary' role='button' href='?a=$article_id'>
                           Read article
                             <svg class='bi bi-arrow-right' width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
